@@ -17,6 +17,7 @@
 </head>
 <body>
     <div class="center">
+	    <button onclick="stripHtml()">stripit</button>
         <input name="url" id="url" type="text" placeholder="Sample Data: https://www.microsoft.com/store/productId/9NSWSBXN8K03" style="width:500px;height:30px;font:14px Arial, Tahoma, Helvetica, Verdana;text-align:left;background: rgba(255, 255, 255, 0.55);box-shadow: 0 0 5px rgba(0,0,0,0.5);white-space:nowrap;vertical-align: text-top;color: oldlace;"/>
         <input name="lang" id="lang" type="hidden" value="en">
         <input type="button" value="&#10004;" style="width:50px;height:30px;font:14px Arial, Tahoma, Helvetica, Verdana;text-align:center;box-shadow: 0 0 5px rgba(0,0,0,0.5);white-space:nowrap;vertical-align: text-top;" title="Generate temporary links" onclick="sumbit()"/>
@@ -28,6 +29,13 @@
     </div>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript"> 
+	    
+	    function stripHtml(html)
+{
+   let tmp = document.createElement("DIV");
+   tmp.innerHTML = html;
+   return tmp.textContent || tmp.innerText || "";
+}
 	    
     function getXmlHttp() {
         var xmlhttp;
