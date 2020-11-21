@@ -23,6 +23,8 @@
         <p>
             <div id="selectBoxInfo" disabled="disabled"></div>
         </p>
+	<p>
+        </p>
     </div>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript"> 
@@ -53,11 +55,7 @@
             if (xmlhttp.readyState == 4) {
                 if(xmlhttp.status == 200) {
 			
-	var doc = window.document.createElement("doc");
-         var a = xmlhttp.responseText;
-         a = JSON.parse(a);
-         document.getElementById("textbox").value=a.first;
-         document.getElementById("textbox2").value=a.second;
+                console.log(xmlhttp.responseText);
                
                 }
             }
