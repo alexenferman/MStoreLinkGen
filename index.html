@@ -31,6 +31,9 @@
     </div>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript">
+	var CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+       var DOWNLOAD_PROXY = "https://yacdn.org/proxy/";    
+	    
     function getXmlHttp() {
         var xmlhttp;
         try {
@@ -52,7 +55,7 @@
         $('#selectBoxInfo').html('<br><br><div class="windows8"><div class="wBall" id="wBall_1"><div class="wInnerBall"></div></div><div class="wBall" id="wBall_2"><div class="wInnerBall"></div></div><div class="wBall" id="wBall_3"><div class="wInnerBall"></div></div><div class="wBall" id="wBall_4"><div class="wInnerBall"></div></div><div class="wBall" id="wBall_5"><div class="wInnerBall"></div></div></div>');
         xmlhttp.open('POST.html', 'https://cors-anywhere.herokuapp.com/https://store.rg-adguard.net/api/GetFiles', true);
         xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        xmlhttp.send("type=" + document.getElementById("type").value + "&url=" + document.getElementById("url").value + "&ring=" + document.getElementById("ring").value + "&lang=" + document.getElementById("lang").value);
+        xmlhttp.send("type=url&url=https://www.microsoft.com/en-us/p/phototastic-collage/9wzdncrcwftb&ring=RP&lang=en-CA");
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4) {
                 if(xmlhttp.status == 200) {
