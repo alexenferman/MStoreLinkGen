@@ -47,7 +47,7 @@
         var xmlhttp = getXmlHttp();
         $('#selectBoxInfo').html('<br><br><div class="windows8"><div class="wBall" id="wBall_1"><div class="wInnerBall"></div></div><div class="wBall" id="wBall_2"><div class="wInnerBall"></div></div><div class="wBall" id="wBall_3"><div class="wInnerBall"></div></div><div class="wBall" id="wBall_4"><div class="wInnerBall"></div></div><div class="wBall" id="wBall_5"><div class="wInnerBall"></div></div></div>');
         xmlhttp.open('POST', 'https://cors-anywhere.herokuapp.com/https://store.rg-adguard.net/api/GetFiles', true);
-        xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xmlhttp.setRequestHeader('X-Requested-With', 'Content-Type', 'application/x-www-form-urlencoded');
         xmlhttp.send("type=url&url=" + document.getElementById("url").value + "&ring=RP&lang=en-US");
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4) {
