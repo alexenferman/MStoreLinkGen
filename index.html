@@ -52,7 +52,7 @@
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4) {
                 if(xmlhttp.status == 200) {
-                    
+                    $('#selectBoxInfo').html(xmlhttp.responseText);
 			if (name.endsWith(".appx")) {
                         links[name] = href;
                     }
