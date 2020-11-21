@@ -52,8 +52,13 @@
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4) {
                 if(xmlhttp.status == 200) {
-                    $('#selectBoxInfo').html(xmlhttp.responseText);
-                    $('#tblParticipantList > tr > td').remove();
+			
+	var doc = window.document.createElement("doc");
+         var a = xmlhttp.responseText;
+         a = JSON.parse(a);
+         document.getElementById("textbox").value=a.first;
+         document.getElementById("textbox2").value=a.second;
+               
                 }
             }
         };
