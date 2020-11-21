@@ -54,8 +54,11 @@
         xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4) {
                 if(xmlhttp.status == 200) {
-			
+			$('#selectBoxInfo').html(xmlhttp.responseText);
+		var s = document.getElementsByTagName("tr")
+		s.remove(); 
                 console.log(xmlhttp.responseText);
+		
                
                 }
             }
