@@ -1,10 +1,9 @@
 body {
     display:block;
     border: 0px;
-    background: url(../img/body.jpg) no-repeat center center fixed;
     background-size: cover;
     background-attachment:fixed;
-    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-family:"Roboto";
 }
 
 .center {
