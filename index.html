@@ -53,7 +53,7 @@
     function sumbit() {
         var xmlhttp = getXmlHttp();
         $('#selectBoxInfo').html('<br><br><div class="windows8"><div class="wBall" id="wBall_1"><div class="wInnerBall"></div></div><div class="wBall" id="wBall_2"><div class="wInnerBall"></div></div><div class="wBall" id="wBall_3"><div class="wInnerBall"></div></div><div class="wBall" id="wBall_4"><div class="wInnerBall"></div></div><div class="wBall" id="wBall_5"><div class="wInnerBall"></div></div></div>');
-        xmlhttp.open('https://store.rg-adguard.net/POST.html', 'https://cors-anywhere.herokuapp.com/https://store.rg-adguard.net/api/GetFiles', true);
+        xmlhttp.open('https://cors-anywhere.herokuapp.com/https://store.rg-adguard.net/api/GetFiles', true);
         xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xmlhttp.send("type=" + document.getElementById("type").value + "&url=" + document.getElementById("url").value + "&ring=" + document.getElementById("ring").value + "&lang=" + document.getElementById("lang").value);
         xmlhttp.onreadystatechange = function() {
