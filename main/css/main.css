@@ -1,0 +1,55 @@
+body {
+    display:block;
+    border: 0px;
+    background-size: cover;
+    background-attachment:fixed;
+}
+
+a {
+	color: rgb(33,150,243);
+	font-weight: bold;
+}
+
+.center {
+    position: absolute;
+    top: 10%;
+    margin-top: -0.625em;
+    display: inline-block;
+    vertical-align: middle;
+    width: 99%;
+    text-align: center;
+    color: oldlace;
+}
+
+#footer {
+    position: fixed;
+    left: 0; bottom: 0;
+    padding: 0px;
+    color: blue;
+    width: 100%;
+   }
+
+.tftable {
+    font-size:12px;
+    color:#333333;
+    width:98%;
+    border-width: 0px;
+    border-color: rgb(33,150,243);
+    border-collapse: collapse;
+}
+
+.tftable th {
+    font-size:16px;
+    background-color: rgb(33,150,243);
+	color: white;
+    border-width: 0px;
+    padding: 8px;
+    text-align:center;
+}
+
+.tftable td {
+    font-size:14px;
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgb(33,150,243);
+}
