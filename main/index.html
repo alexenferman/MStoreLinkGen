@@ -18,8 +18,9 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="img/box.png">
 <style>
+
 a {
-	color: rgb(33,150,243);
+	color: rgba(0,0,0,.54);
 	font-weight: 600;
 	text-decoration:none;
 }
@@ -29,17 +30,19 @@ font-size: 14px
 }
 
 td {
-padding: 9px
+color: rgba(0,0,0,.54);
+padding: 10px
 }
 
 tbody tr:nth-child(even) th {
 background: white;
+font-size: 12px;
 }
 
     tbody tr:nth-child(even) td,
     tbody tr:nth-child(even) tr
     {
-        background: white;
+        background: #fff;
     }
 </style>
 </head>
@@ -51,16 +54,21 @@ background: white;
 				<span style="color: white; padding-left: 10px" class="mdl-layout-title">AEM Store Link Generator</span>
 				<div class="mdl-layout-spacer"></div>
 				<nav class="mdl-navigation">
-					
-					<a style="padding-left:40px;"><button style="color:white;" class="mdl-button mdl-js-button mdl-js-ripple-effect">Home</button></a>
-					<a style="padding-left:10px;"><button style="color:white;" class="mdl-button mdl-js-button mdl-js-ripple-effect">About</button></a>
+					<div style="padding-right: 30px;">
+						<a style="padding-left:40px;"><button style="color:white;" class="mdl-button mdl-js-button mdl-js-ripple-effect">Home</button></a>
+						<a style="padding-left:10px;"><button style="color:white;" class="mdl-button mdl-js-button mdl-js-ripple-effect">About</button></a>
+					</div>
+					<a href="https://www.microsoft.com/en-us/store/apps/windows" target="_blank"><button style="  top: 30px; right: 16px;" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+						<!--<img style="width:50px" src="./img/store.png" />-->
+						<i class="material-icons">shop_two</i>
+					</button></a>
 				</nav>
 			</div>
 		</header>
  
 <main class="mdl-layout__content">
 	<div class="page-content"><!-- Your content goes here -->
-	<center >
+	<center>
 	<div style="max-width: 1500px;">
 	<div>
         <div style="width: 500px" class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -68,6 +76,7 @@ background: white;
              <label class="mdl-textfield__label" for="url">Store URL</label>
         </div>
 		<button value="&#10004;" title="Generate temporary links" onclick="sumbit()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"> Generate Links</button>
+		<button onclick="getURLParam()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"> Generate Links</button>
 		
         <input name="lang" id="lang" type="hidden" value="en"/>
 
@@ -84,9 +93,11 @@ background: white;
 	<div style="display: none;" id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
 	
 	</center>
+	<script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript"> 
-
+	
+	<script type="text/javascript">
+	
     function getXmlHttp() {
         var xmlhttp;
         try {
