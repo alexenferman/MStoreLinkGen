@@ -2,7 +2,7 @@
 A clean UI driven website that gets .appx links for microsoft store apps  
 **Cannot be used to pirate apps!**  
   
-[Visit the website project](https://alexenferman.github.io/MStoreLinkGen/main/index.html)
+[Visit the website project](https://mslg.alexenferman.com)
 
 ![](https://i.postimg.cc/BQrDL2Yy/str1.png)
 
